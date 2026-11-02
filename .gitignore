@@ -16,5 +16,6 @@ build/
 # Personal settings
 .claude/settings.local.json
 
-# Template design notes
+# Template design notes and local to-dos
 docs/superpowers/
+TODO.local.md
