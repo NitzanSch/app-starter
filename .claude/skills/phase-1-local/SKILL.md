@@ -8,7 +8,7 @@ description: Use after start-app. Sets up the computer and the GitHub repo, then
 ## 1a. Set up
 
 1. Check what's already installed. Install what's missing with `winget`, checking for the newest stable version first. Typically that's Git, GitHub CLI (`GitHub.cli`) and Node LTS (`OpenJS.NodeJS.LTS`).
-2. Connect to GitHub, below, if the bootstrap prompt hasn't already.
+2. Connect to GitHub, below.
 3. Run `add-dev-tools` for the chosen stack.
 4. Record tools and versions in `memory/environment.md`.
 
@@ -16,12 +16,12 @@ description: Use after start-app. Sets up the computer and the GitHub repo, then
 
 Skip anything already done.
 
-1. Check login with `gh auth status`. If they aren't logged in, ask if they have a GitHub account. If not, use `human-step/guides/github-account.md` first.
+1. Check login with `gh auth status`. If it's logged in, ask only whether that username is theirs. If it isn't logged in, ask if they have a GitHub account. If not, use `human-step/guides/github-account.md` first.
 2. Run this in the background, with output sent to a file you can read:
    `gh auth login --hostname github.com --git-protocol https --web --scopes "repo,workflow"`
 3. Read the file for the one-time code and link, then give both to the user with `human-step`. You'll be told when the command finishes. Check in if nothing has happened after a minute.
 4. Run `gh auth setup-git`. If Git has no `user.name` or `user.email`, set them for this repo from their GitHub profile, using their GitHub noreply email.
-5. Create the repo and point this folder at it, unless `origin` is already theirs:
+5. Create the repo with the working name from `start-app`, and point this folder at it, unless `origin` is already theirs. If the name is taken, adjust it yourself. To rename later, use `gh repo rename`.
    ```
    gh repo create <app-name> --private
    git remote set-url origin https://github.com/<username>/<app-name>.git

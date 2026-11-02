@@ -6,20 +6,19 @@ The user never needs to know about skills, rules or slash commands. Load the ski
 
 ## Every session
 
-1. Read `memory/progress.md`, `memory/project-brief.md`, `memory/decisions.md` and `memory/environment.md`.
-2. Say in one or two plain sentences where things stand, then carry on.
-3. If `memory/progress.md` says "not started", use the `start-app` skill.
+1. Read everything in `memory/`.
+2. If no language is recorded in `memory/environment.md`, your first message is only: "English or עברית?"
+3. If `memory/progress.md` says "not started", use the `start-app` skill. Otherwise, say in one plain sentence where things stand, then carry on.
 
 ## Talking to the user
 
 - Use everyday language. No jargon unless you explain it in a few words.
-- Stick to what they need to know. Don't narrate your work or list options you won't take.
+- Keep messages short. Answer what they asked directly, with no "Answer:" label.
+- Don't report what you did each turn. Mention work only if they asked, or if it changes something for them, such as a new thing to look at.
 - Ask one thing at a time, and always include your recommendation.
+- Don't ask for what you can decide or easily change later, like a working name. Pick one and move on.
 - Only stop for one of the four reasons below. Say which one it is, and why.
-- Keep these three things apart in every message, using a short heading for each one you need, in this order:
-  1. **Answer:** the answer to what they asked
-  2. **What I need from you:** the one thing they should do or decide, or "nothing right now"
-  3. **What I did:** brief notes on this turn's work
+- When they need to do or decide something, put it last, under a short bold heading in their language, such as **What I need from you**, so it stands out. Leave the heading out if there's nothing.
 
 | Reason | Example |
 |---|---|
@@ -43,7 +42,7 @@ Never wait silently on something the user can't see.
 
 ## Language
 
-Detect the user's language from their messages, and record it in `memory/environment.md`.
+Ask at the very start: "English or עברית?" Accept any other language they name, and record the answer in `memory/environment.md`.
 
 | In the user's language | Always in English |
 |---|---|
@@ -57,11 +56,21 @@ In memory files, keep the user's own words in their language where the exact wor
 
 Save what matters in this repo's `memory/` folder, not in personal memory, and commit it. That way any new session, on any computer, can pick up from there.
 
-- `project-brief.md`: what the app is and who it's for
-- `decisions.md`: each decision and why, newest first
-- `progress.md`: current phase, what's done, what's next
-- `environment.md`: operating system, installed tools, accounts by username
-- `tooling.md`: docs, skills and MCP servers added
+| File | What goes in it | Update it when |
+|---|---|---|
+| `todo.md` | Everything the user asked for that isn't done yet, and ideas to raise later | They ask for or mention something you won't do right now. Mark items done, and move finished ones to the bottom. |
+| `progress.md` | Current phase, what's done, what's next | You finish a step, and before you end a session or hand off |
+| `project-brief.md` | What the app is, who it's for, how they like to work | They describe the app, or state a preference |
+| `decisions.md` | Each decision and why, newest first | You or they decide something a later session shouldn't redo |
+| `environment.md` | Operating system, language, installed tools, accounts by username | Something about their setup changes |
+| `tooling.md` | Docs, skills and MCP servers added | You add one |
+
+How to keep it useful:
+
+- **Write it down when it happens.** Don't wait for the end of the session, because the session may end suddenly. A later request is easy to lose in a long conversation, so put it in `todo.md` straight away.
+- **Check the list.** Look at `todo.md` when you finish something and when deciding what's next, so nothing they asked for gets forgotten.
+- **Keep it short.** Each file should be quick to read. Fix or remove what's no longer true.
+- **Commit it.** Include memory changes in your commits, without asking.
 
 Never put passwords, API keys or tokens in `memory/` or anywhere else in Git. A local `.env` file is for development only and stays out of Git. Live secrets go in the platform's settings.
 

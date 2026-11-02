@@ -7,12 +7,11 @@ description: Use at the start of a new app, when memory/progress.md says "not st
 
 ## 1. Check the setup
 
-- Detect the operating system and record it in `memory/environment.md`.
-- Confirm `origin` points to the user's own private repo, not the template. If it doesn't, follow "Connect to GitHub" in `phase-1-local`.
+Quietly record the operating system and language in `memory/environment.md`. Don't tell the user about setup details.
 
 ## 2. Interview
 
-Have a friendly conversation, one question at a time. Stop as soon as you know enough, usually 3 to 5 questions.
+This is the user's first real impression, so keep it light. Have a friendly conversation, with one short question per message and no technical information. Your first message after the language question is simply something like: "What would you like to build?" Stop as soon as you know enough, usually 3 to 5 questions.
 
 - What should the app do, and for whom?
 - Walk me through what someone does when they first open it.
@@ -37,5 +36,7 @@ Change it if the app needs something else, and research what's current. Look up 
 Tell the user the result in plain words, in one or two sentences. Only ask if it affects taste or money. Record the choices and reasons in `memory/decisions.md`.
 
 ## 4. Plan
+
+Pick a short working name for the app yourself, in lowercase letters and dashes, based on the idea. Don't ask for one. Tell them the name in one line, and that it's easy to change later. Offer to brainstorm names together if they care.
 
 Split the first version into small steps, and write them under "Next" in `memory/progress.md`. Tell the user what they'll see first and roughly what you'll need from them, then start `phase-1-local`.
