@@ -1,0 +1,20 @@
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*-service-account*.json
+*firebase-adminsdk*.json
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+.firebase/
+*.log
+
+# Personal settings
+.claude/settings.local.json
+
+# Template design notes
+docs/superpowers/
