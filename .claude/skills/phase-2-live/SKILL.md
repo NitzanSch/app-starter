@@ -54,4 +54,4 @@ Leave these until the app needs them. Check Google's current pricing page first,
 
 1. Deploy, then commit and push.
 2. Show them what works now, in plain words.
-3. Ask what matters most to them next. Save the answer, and start `phase-3-grow`.
+3. Start `phase-3-grow`.

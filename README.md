@@ -18,17 +18,17 @@ Build a real web app by describing what you want. You don't need to know how to 
 ```text
 Set up a new app project in this folder from the template at https://github.com/NitzanSch/app-starter
 
-Before anything else, ask me only this: English or עברית? From then on, talk to me in that language.
+Start with only this message: "I'd like to help you build your app. Would you like to continue in English or Hebrew? / אשמח לעזור לך לבנות את האפליקציה. נמשיך בעברית או באנגלית?" From then on, talk to me in the language I choose.
 
-I'm not a developer, so use plain, non-technical words, keep messages short and ask one thing at a time. Don't report what you've done unless it matters to me. Assume I have no accounts and nothing installed. Never wait silently: if a step may show a Windows approval prompt, tell me first, because it can open behind this window.
+I'm not a developer, so use plain, non-technical words, keep messages short and ask one thing at a time. Tell me what you're doing the way you'd update a manager, without technical details. Assume I have no accounts and nothing installed. Never wait silently: if a step may show a Windows approval prompt, tell me first, because it can open behind this window.
 
 After I answer, do these in order:
 
 1. Check my operating system. If Git or GitHub CLI are missing, I approve installing them with winget. Run the installs in the background.
 2. Clone the template directly into this folder, not into a subfolder.
 3. Read AGENTS.md and follow it from now on. This session started before the files existed, so read skills directly from .claude/skills/<name>/SKILL.md.
-4. Follow the start-app skill and interview me about my app.
-5. Follow the phase-1-local skill. For GitHub, I approve creating a new private GitHub repository under my own account for this app, using a working name you choose, changing this folder's origin remote to that repository, and pushing this project to it. Never push to the template.
+4. Follow the start-app skill: explain the plan, then interview me about my app.
+5. Follow the phase-1-local skill. For GitHub, I approve creating a new private GitHub repository under my own account for this app, using its name or a working name, changing this folder's origin remote to that repository, and pushing this project to it. Never push to the template.
 ```
 
 That's it. Claude takes it from here.
@@ -36,10 +36,11 @@ That's it. Claude takes it from here.
 ## What happens next
 
 1. Claude asks which language you prefer, then gets the project ready. Windows may ask you to click **Yes** once or twice.
-2. Claude asks about your app, and what you want it to do.
+2. Claude explains the plan and asks about your app, including its name if you have one.
 3. Claude sets up a safe online copy, then you see a first version on your own computer.
-4. Claude puts it on the internet, and you open it on your phone.
-5. Claude adds saved data and login if your app needs them, then asks what you'd like next.
+4. Claude puts it on the internet as a website, and you open it on your phone. An App Store version can come later.
+5. Claude adds saved data and login if your app needs them.
+6. From there, you keep improving the app for as long as you like, with a new chat for each thing you want to work on.
 
 ## When Claude asks you something
 
@@ -56,7 +57,7 @@ If Claude asks you to approve something and gives you an exact sentence to reply
 
 ## Coming back later
 
-Open the **Code** tab, choose the same folder, make sure the mode is **Auto**, and say "let's continue". Everything Claude needs to remember is saved in the project itself.
+Start a new chat in the **Code** tab, choose the same folder, make sure the mode is **Auto**, and say what you'd like to do, or just "let's continue". Everything Claude needs to remember is saved in the project itself.
 
 ## Good to know
 
